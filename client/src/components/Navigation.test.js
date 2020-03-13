@@ -6,7 +6,7 @@ test('renders without crashing', () => {
     render(<Navigation/>);
   });
 
-  test("renders toggle button on nav", () => {
+  test("Toggle button on nav is rendering with correct value", () => {
     const { getByText } = render(<Navigation />);
     const value = getByText(/toggle dark mode/i);
     expect(value).toBeDefined();

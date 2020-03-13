@@ -23,6 +23,9 @@ class App extends Component {
     return (
       <div className = "App">
         <Navigation />
+        <div className = "title">
+        <h2>Players</h2>
+        </div>
       <div className = "players">
         {this.state.playerData.map(player => (
           <div className = "playercard">
