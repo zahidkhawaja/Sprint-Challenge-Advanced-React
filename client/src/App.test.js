@@ -6,23 +6,17 @@ test('renders without crashing', () => {
   render(<App/>);
 });
 
-test("renders welcome on nav", () => {
+test("Welcome header renders on nav", () => {
   const { getByText } = render(<App />);
   const value = getByText(/welcome/i);
   expect(value).toBeDefined();
 });
 
-test("Welcome header is rendering", () => {
+test("Player info displays", () => {
   const { getByText } = render(<App />);
-  const value = getByText(/welcome/i);
-  expect(value).toBeDefined();
+  const playerValue = getByText(/player/i);
+  expect(playerValue).toBeDefined();
 });
-
-// test("Player info displays", () => {
-//   const { getByText } = render(<App />);
-//   const playerValue = getByText(/player/i);
-//   expect(playerValue).toBeDefined();
-// });
 
 
 

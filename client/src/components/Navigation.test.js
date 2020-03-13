@@ -11,4 +11,10 @@ test('renders without crashing', () => {
     const value = getByText(/toggle dark mode/i);
     expect(value).toBeDefined();
   });
+
+  test("Nav renders correctly", () => {
+    const { getByText } = render(<Navigation />);
+    const value = getByText(/welcome/i);
+    expect(value).toBeDefined();
+  });
   
