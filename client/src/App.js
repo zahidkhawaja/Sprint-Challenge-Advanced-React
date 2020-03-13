@@ -26,7 +26,7 @@ class App extends Component {
       <div className = "players">
         {this.state.playerData.map(player => (
           <div className = "playercard">
-            <h3>{player.name}</h3>
+            <h3>Name: {player.name}</h3>
             <p>Country: {player.country}</p>
             <p>Searches: {player.searches}</p>
           </div>
