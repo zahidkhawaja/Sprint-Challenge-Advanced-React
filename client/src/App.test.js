@@ -1,9 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from "@testing-library/react";
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+test('renders without crashing', () => {
+  render(<App/>);
 });
+
+test("Welcome header renders on nav", () => {
+  const { getByText } = render(<App />);
+  const value = getByText(/welcome/i);
+  expect(value).toBeDefined();
+});
+
+test("Player info displays", () => {
+  const { getByText } = render(<App />);
+  const playerValue = getByText(/player/i);
+  expect(playerValue).toBeDefined();
+});
+
+
+
+
+
